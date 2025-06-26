@@ -1,4 +1,7 @@
 import { assets } from '@/utills/assets'
+import Button from '@/components/Button'
+import { signOut } from 'firebase/auth'
+import { auth } from '@/firebase/config'
 
 export default function Nav() {
     return (
@@ -15,8 +18,11 @@ export default function Nav() {
                 <img src={assets.upload} alt="upload" className="w-[24px] h-[24px]" />
             </div>
 
-            
-            <img src={assets.profile} alt="profile" className="w-[24px] h-[24px]" />
+            <Button variant="primary" size="medium" className="w-full" onClick={() => {
+                signOut(auth)
+            }}>
+                <img src={assets.profile} alt="profile" className="w-[24px] h-[24px]" />
+            </Button>
 
 
             
