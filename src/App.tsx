@@ -1,10 +1,15 @@
+import { Provider } from 'react-redux'
+import { store } from '@/store'
 import Nav from './components/Nav'
 import Home from './pages/Home'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
 import Login from '@/pages/Login'
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from '@/firebase/config'
+import { setUser, setLoading } from '@/store/slices/authSlice'
+import type { RootState } from '@/store'
 
 function DashboardLayout() {
   return (
@@ -17,19 +22,22 @@ function DashboardLayout() {
   )
 }
 
-export default function App() {
-  const [user, setUser] = useState(null)
-  const [loading, setLoading] = useState(true)
+function AppContent() {
+  const { user, isLoading } = useSelector((state: RootState) => state.auth)
+  const dispatch = useDispatch()
 
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, (u) => {
-      setUser(u)
-      setLoading(false)
+      dispatch(setUser(u ? {
+        uid: u.uid,
+        email: u.email,
+        displayName: u.displayName
+      } : null))
     })
     return () => unsub()
-  }, [])
+  }, [dispatch])
 
-  if (loading) {
+  if (isLoading) {
     return <div className="min-h-screen bg-black-800 flex items-center justify-center text-white">Loading...</div>
   }
 
@@ -40,5 +48,13 @@ export default function App() {
         <Route path="/" element={ user ? <DashboardLayout /> : <Navigate to="/login" replace /> } />
       </Routes>
     </Router>
+  )
+}
+
+export default function App() {
+  return (
+    <Provider store={store}>
+      <AppContent />
+    </Provider>
   )
 }

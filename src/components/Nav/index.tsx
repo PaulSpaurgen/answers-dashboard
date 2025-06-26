@@ -18,11 +18,11 @@ export default function Nav() {
                 <img src={assets.upload} alt="upload" className="w-[24px] h-[24px]" />
             </div>
 
-            <Button variant="primary" size="medium" className="w-full" onClick={() => {
+            <button className="w-full" onClick={() => {
                 signOut(auth)
             }}>
                 <img src={assets.profile} alt="profile" className="w-[24px] h-[24px]" />
-            </Button>
+            </button>
 
 
             
