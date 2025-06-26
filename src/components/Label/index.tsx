@@ -13,7 +13,7 @@ interface LabelProps {
 export default function Label({ text, className, isSelected, onClick , ...rest }: LabelProps) {
   const labelRef = useRef<HTMLDivElement>(null);
   const labelClass =
-    "px-[10px] py-[5px] text-[15px] font-light rounded-[20px] w-fit flex items-center gap-[20px] cursor-pointer relative group ";
+    "lg:px-[10px] lg:py-[5px] px-[8px] py-[6px] lg:text-[15px] text-[12px] font-light rounded-[20px] w-fit flex items-center gap-[20px] cursor-pointer relative group ";
   const labelClassNormal =
     " border-[0.5px] border-gray-400 text-gray-400 bg-gray-300 hover:border-green-400 hover:bg-green-50 hover:text-green-500 transition-all duration-300 ";
   const labelClassesSelected =

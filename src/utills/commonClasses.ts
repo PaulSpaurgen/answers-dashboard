@@ -7,10 +7,10 @@ const buttonVariantClasses = {
 // box-shadow: 0px 0px 12.7px 0px #FFFFFF0D inset;
 
 const buttonSizes = {
-  small: "px-[10px] py-[5px] text-[14px] rounded-[4px] font-normal",
-  medium: "px-[10px] py-[7px] text-[16px] rounded-[4px] font-medium",
-  large: "px-[10px] py-[7px] text-[18px] rounded-[4px] font-medium",
-  iconOnly: "px-[9.5px] py-[10px] rounded-[4px] font-medium"
+  small: "lg:px-[10px] lg:py-[5px] px-[8px] py-[6px] text-[12px] lg:text-[14px] rounded-[4px] font-normal",
+  medium: "lg:px-[10px] lg:py-[7px] px-[8px] py-[6px] text-[12px] lg:text-[16px] rounded-[4px] font-medium",
+  large: "lg:px-[10px] lg:py-[7px] px-[8px] py-[6px] text-[12px] lg:text-[18px] rounded-[4px] font-medium",
+  iconOnly: "lg:px-[9.5px] lg:py-[10px] px-[8px] py-[8px] rounded-[4px] font-medium"
 };
 
 const boxClasses = {

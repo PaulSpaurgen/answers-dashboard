@@ -67,7 +67,7 @@ export default function HomeEditVariablesComponent() {
   };
 
   return (
-    <div className="w-full  mt-[30px] custom-scrollbar overflow-y-auto">
+    <div className="w-full  mt-[30px] ">
       <div className="flex gap-[10px] w-full">
         <div className="w-full">
           <Input
@@ -80,7 +80,7 @@ export default function HomeEditVariablesComponent() {
               <img
                 src={assets.search}
                 alt="search"
-                className="w-[16px] h-[16px] "
+                className="lg:w-[16px] lg:h-[16px] w-[12px] h-[12px] "
               />
             }
           />
@@ -90,12 +90,12 @@ export default function HomeEditVariablesComponent() {
             variant="primary"
             size="medium"
             onClick={() => {}}
-            className="px-[24px] py-[7.5px]"
+            className="lg:px-[24px] px-[16px] lg:py-[7.5px] py-[6px]"
             icon={
               <img
                 src={assets.stars}
                 alt="stars"
-                className="w-[16px] h-[16px] icon-white"
+                className="lg:w-[16px] lg:h-[16px] w-[12px] h-[12px] icon-white"
               />
             }
           >
@@ -106,7 +106,7 @@ export default function HomeEditVariablesComponent() {
           <Button
             variant="tertiary"
             size="medium"
-            className="px-[24px] py-[7.5px]"
+            className="lg:px-[24px] px-[16px] lg:py-[7.5px] py-[6px]"
             onClick={() => {}}
             icon={
               <img
@@ -137,7 +137,7 @@ export default function HomeEditVariablesComponent() {
               <h4 className="text-[15px] font-normal text-gray-400 mb-[20px]">
                 {category.title}
               </h4>
-              <div className="flex flex-wrap gap-[20px]">
+              <div className="flex flex-wrap gap-[10px] lg:gap-[20px]">
                 {category.variables.map((variable, index) => (
                   <Label
                     key={`${category.id}-${index}`}

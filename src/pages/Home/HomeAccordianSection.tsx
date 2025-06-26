@@ -9,12 +9,12 @@ export default function HomeAccordianSection() {
     <div className={`space-y-4`}>
       {/* Header */}
       <div
-        className="flex w-full justify-between"
+        className="flex w-full justify-between cursor-pointer"
         onClick={() => setIsExpanded(!isExpanded)}
       >
         <div className="flex items-center gap-2">
           <img src={assets.stars} alt="stars" className="w-[18px] h-[18px]" />
-          <h2 className="text-[24px] font-semibold text-green-100">
+          <h2 className="lg:text-[24px] text-[18px] font-semibold text-green-100">
             Best Scenario Results
           </h2>
         </div>
@@ -22,7 +22,7 @@ export default function HomeAccordianSection() {
           <img
             src={assets.downarrow}
             alt="downarrow"
-            className={`w-[12px] h-[7px] transition-all duration-300 ${
+            className={`lg:w-[12px] lg:h-[7px] w-[10px] h-[6px] transition-all duration-300 ${
               isExpanded ? "rotate-180" : ""
             }`}
           />
@@ -43,14 +43,14 @@ export default function HomeAccordianSection() {
             className="overflow-hidden"
           >
             <motion.div 
-              className="flex flex-col gap-[16px] text-[16px] font-normal text-green-200 pt-4"
+              className="flex flex-col gap-[16px] lg:text-[16px] text-[12px] font-normal text-green-200 pt-4"
               initial={{ y: -20 }}
               animate={{ y: 0 }}
               exit={{ y: -20 }}
               transition={{ duration:0.2, delay: 0.1 }}
             >
               <motion.div 
-                className="px-[24px] py-[15px] flex w-full justify-between border-[0.5px] border-green-200 rounded-[6px] hover:border-green-100 transition-colors duration-200"
+                className="lg:px-[24px] px-[16px] lg:py-[15px] py-[10px] flex w-full justify-between border-[0.5px] border-green-200 rounded-[6px] hover:border-green-100 transition-colors duration-200"
                 transition={{ duration:0.2, delay: 0.2 }}
               >
                 <p>

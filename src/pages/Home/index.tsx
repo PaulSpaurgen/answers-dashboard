@@ -14,14 +14,14 @@ export default function Home() {
     <div className="w-full h-full overflow-y-hidden">
       <HomeHeader />
       <div className="w-full p-[37px] bg-black-500 h-[calc(100vh-82px)] border-[1px] border-black-200 rounded-tl-[5px] rounded-br-[5px] rounded-bl-[5px] overflow-y-auto custom-scrollbar">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center flex-wrap gap-[10px]">
           <div className="flex items-center gap-[10px]">
             <img
               src={assets.lightning}
               alt="lightning"
-              className="w-[30px] h-[30px]"
+              className="lg:w-[30px] lg:h-[30px] w-[24px] h-[24px]"
             />
-            <h1 className="text-[32px] font-bold text-white-100">
+            <h1 className="lg:text-[32px] text-[24px] font-bold text-white-100 ">
               Charging Stations
             </h1>
           </div>
@@ -31,7 +31,7 @@ export default function Home() {
               variant="primary"
               size="iconOnly"
               onClick={() => {}}
-              icon={<img src={assets.time} alt="time" />}
+              icon={<img src={assets.time} alt="time" className="lg:w-[16px] lg:h-[16px] w-[12px] h-[12px]" />}
             />
             <Button variant="primary" size="medium" onClick={() => setIsDrawerOpen(true)}>
               {" "}
@@ -41,7 +41,7 @@ export default function Home() {
               variant="primary"
               size="iconOnly"
               onClick={() => {}}
-              icon={<img src={assets.uploadU} alt="time" />}
+              icon={<img src={assets.uploadU} alt="time" className="lg:w-[16px] lg:h-[16px] w-[12px] h-[12px]" />}
             />
           </div>
         </div>

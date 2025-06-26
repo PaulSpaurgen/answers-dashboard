@@ -24,14 +24,14 @@ export default function Accordion({
         className="flex w-full justify-between cursor-pointer items-center px-[20px] py-[10px] border-[1px] border-black-200 rounded-[4px] bg-black-600"
         onClick={() => setIsExpanded(!isExpanded)}
       >
-         <h2 className="text-[20px] font-normal text-green-100">
+         <h2 className="lg:text-[20px] text-[16px] font-normal text-green-100">
             {title}
           </h2>
         <div className="flex items-center justify-center w-[44px] h-[34px] rounded-[56px] border-[0.67px] border-green-200">
           <img
             src={assets.downarrow}
             alt="downarrow"
-            className={`w-[12px] h-[7px] transition-all duration-300 ${
+            className={`lg:w-[12px] lg:h-[7px] w-[10px] h-[6px] transition-all duration-300 ${
               isExpanded ? "rotate-180" : ""
             }`}
           />

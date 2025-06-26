@@ -1,5 +1,5 @@
 import Button from "../../components/Button";
-import GraphBox from "../../components/GraphBox";
+import GraphBox from "./GraphBox";
 import { assets } from "../../utills/assets";
 import KPICard from "../../components/KPICard";
 
@@ -17,7 +17,7 @@ export default function HomeGraphsection() {
       {/* KPI Cards - 2x2 grid on the right side */}
       <div className="2xl:w-1/3 h-full">
         <div className="flex flex-col  h-fit">
-          <div className="flex items-center justify-between mb-[10px]">
+          <div className="flex items-center justify-between mb-[10px] flex-wrap gap-[10px]">
             <h3 className="text-[24px] font-bold text-white-100">
               Key Performance Indicators
             </h3>
@@ -27,7 +27,7 @@ export default function HomeGraphsection() {
                 <img
                   src={assets.plus}
                   alt="plus"
-                  className="ml-[10px] w-[12px] h-[12px]"
+                  className="ml-[10px] lg:w-[12px] lg:h-[12px] w-[10px] h-[10px]"
                 />
               </div>
             </Button>

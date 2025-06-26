@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
-import commonClasses from "../../utills/commonClasses";
+import commonClasses from "../../../utills/commonClasses";
 
 interface GraphBoxProps {
-  /** Optional toolbar (e.g. dropdown) */
   toolbar?: React.ReactNode;
-  /** Graph (or children) content */
   children?: React.ReactNode;
   className?: string;
 }
@@ -31,7 +29,7 @@ export default function GraphBox({
     };
   }, []);
 
-  // Chart configuration matching the reference design
+  // Chart configuration 
   const chartOptions: Highcharts.Options = {
     chart: {
       type: "line",

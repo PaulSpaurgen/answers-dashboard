@@ -8,8 +8,8 @@ interface InputProps {
     className?: string;
 }
 
-const inputBoxClasses = "flex items-center gap-[8px] rounded-[5px] border-[1px] border-black-400 bg-black-100 text-white px-[12px] py-[8px] ";
-const inputClasses = "w-full placeholder:text-white-100 bg-transparent border-none outline-none focus:border-none focus:outline-none active:border-none active:outline-none w-full";
+const inputBoxClasses = "flex items-center gap-[8px] rounded-[5px] border-[1px] border-black-400 bg-black-100 text-white px-[10px] py-[6px] lg:px-[12px] lg:py-[8px] ";
+const inputClasses = "w-full text-[12px] lg:text-[16px] placeholder:text-white-100 bg-transparent border-none outline-none focus:border-none focus:outline-none active:border-none active:outline-none w-full";
 
 export default function Input({ placeholder, value, onChange, type , className, icon, name, ...rest }: InputProps) {
    return (
