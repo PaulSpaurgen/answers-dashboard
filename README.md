@@ -91,14 +91,8 @@ Visit `http://localhost:5173`
 
 Modern browsers (Chrome, Firefox, Safari, Edge) with ES2020+ features.
 
-## ⏱ Development Time
+## ⏱ Development Time ~ 6-7hrs
 
-**Total: ~12 hours**
-- Setup & Firebase: 2h
-- Dashboard: 4h  
-- Auth & routing: 2h
-- Animations: 3h
-- Redux integration: 1h
 
 ## 🚀 Scripts
 
