@@ -1,0 +1,158 @@
+/* src/index.css */
+
+@import "tailwindcss";
+
+/* Roobert Font Family - for headings only */
+@font-face {
+  font-family: 'Roobert';
+  src: url('/DP_roobert_TRIAL/DP_roobert_TRIAL/RoobertTRIAL-Light.woff2') format('woff2'),
+       url('/DP_roobert_TRIAL/DP_roobert_TRIAL/RoobertTRIAL-Light.woff') format('woff'),
+       url('/DP_roobert_TRIAL/DP_roobert_TRIAL/RoobertTRIAL-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roobert';
+  src: url('/DP_roobert_TRIAL/DP_roobert_TRIAL/RoobertTRIAL-Regular.woff2') format('woff2'),
+       url('/DP_roobert_TRIAL/DP_roobert_TRIAL/RoobertTRIAL-Regular.woff') format('woff'),
+       url('/DP_roobert_TRIAL/DP_roobert_TRIAL/RoobertTRIAL-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roobert';
+  src: url('/DP_roobert_TRIAL/DP_roobert_TRIAL/RoobertTRIAL-Medium.woff2') format('woff2'),
+       url('/DP_roobert_TRIAL/DP_roobert_TRIAL/RoobertTRIAL-Medium.woff') format('woff'),
+       url('/DP_roobert_TRIAL/DP_roobert_TRIAL/RoobertTRIAL-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roobert';
+  src: url('/DP_roobert_TRIAL/DP_roobert_TRIAL/RoobertTRIAL-SemiBold.woff2') format('woff2'),
+       url('/DP_roobert_TRIAL/DP_roobert_TRIAL/RoobertTRIAL-SemiBold.woff') format('woff'),
+       url('/DP_roobert_TRIAL/DP_roobert_TRIAL/RoobertTRIAL-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roobert';
+  src: url('/DP_roobert_TRIAL/DP_roobert_TRIAL/RoobertTRIAL-Bold.woff2') format('woff2'),
+       url('/DP_roobert_TRIAL/DP_roobert_TRIAL/RoobertTRIAL-Bold.woff') format('woff'),
+       url('/DP_roobert_TRIAL/DP_roobert_TRIAL/RoobertTRIAL-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roobert';
+  src: url('/DP_roobert_TRIAL/DP_roobert_TRIAL/RoobertTRIAL-Heavy.woff2') format('woff2'),
+       url('/DP_roobert_TRIAL/DP_roobert_TRIAL/RoobertTRIAL-Heavy.woff') format('woff'),
+       url('/DP_roobert_TRIAL/DP_roobert_TRIAL/RoobertTRIAL-Heavy.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /* Font Families */
+  --font-family-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-family-roobert: 'Roobert', sans-serif;
+  
+  /* Custom Colors - Tailwind v4 syntax */
+  --color-primary: #000000;
+  --color-secondary: #ffffff;
+
+  --color-gray-100: #BBBBBB;
+  --color-gray-200: #EEEEEE;
+  --color-gray-300: #5959594D;
+  --color-gray-400: #D5D5D5;
+  
+  --color-green-50: #CCFF001A;
+  --color-green-100: #DCFF7FFD;
+  --color-green-200: #C8E972;
+  --color-green-300: #577113;
+  --color-green-400: #C9FF3B;
+  --color-green-500: #C8E972FD;
+
+
+  /* Custom Black Scale */
+  --color-black-100: #171718;
+  --color-black-200: #525252;
+  --color-black-300: #242424;
+  --color-black-400: #5A5A5A;
+  --color-black-500: #161618;
+  --color-black-600: #222324;
+  --color-black-700: #737373;
+  --color-black-800: #0E0D0D;
+
+  --color-white-100: #EDEDED;
+}
+
+/* Global font settings - Inter as default */
+html {
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Heading styles using Roobert */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roobert', sans-serif;
+}
+
+/* SVG Icon Color Filters */
+.icon-white {
+  filter: brightness(0) saturate(100%) invert(97%) sepia(1%) saturate(1184%) hue-rotate(314deg) brightness(96%) contrast(89%);
+}
+
+.icon-green {
+  filter: brightness(0) saturate(100%) invert(88%) sepia(56%) saturate(466%) hue-rotate(38deg) brightness(104%) contrast(97%);
+}
+
+.icon-gray {
+  filter: brightness(0) saturate(100%) invert(84%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+/* Custom Scrollbar Styling */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  margin-right: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--color-black-500);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #565759;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--color-green-500);
+}
+
+.custom-scrollbar::-webkit-scrollbar-corner {
+  background: var(--color-black-600);
+}
+
+
+
