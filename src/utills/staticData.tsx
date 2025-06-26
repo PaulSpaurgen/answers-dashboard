@@ -133,3 +133,30 @@ export const variableCategoriesInitial = [
       ],
     },
   ];
+
+  export const kpiCardsDataInitial = [
+    {
+      title: "Infrastructure Units",
+      value: "€421.07",
+      description: "This describes variable two and what the shown data means.",
+    },
+    {
+      title: "Charging Growth",
+      value: 33.07,
+      description: "This describes variable two and what the shown data means.",
+    },
+    {
+      title: "Localization change",
+      value: "21.9%",
+      description: "This describes variable two and what the shown data means.",
+    },
+    {
+      title: "Fleet growth",
+      value: "7.03%",
+      description: "This describes variable two and what the shown data means.",
+    },
+  ];
+
+    export const GrpahDataInitial = {
+      data: [35000, 20000, 50000, 40000, 90000, 62000, 30000],
+    };

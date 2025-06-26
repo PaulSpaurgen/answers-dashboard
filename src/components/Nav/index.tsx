@@ -1,4 +1,4 @@
-import { assets } from '../../utills/assets'
+import { assets } from '@/utills/assets'
 
 export default function Nav() {
     return (

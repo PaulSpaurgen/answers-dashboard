@@ -1,9 +1,12 @@
-import Button from "../../components/Button";
+import Button from "@/components/Button";
 import GraphBox from "./GraphBox";
-import { assets } from "../../utills/assets";
-import KPICard from "../../components/KPICard";
+import { assets } from "@/utills/assets";
+import KPICard from "@/components/KPICard";
+import { kpiCardsDataInitial } from "@/utills/staticData";
+import { useState } from "react";
 
 export default function HomeGraphsection() {
+  const [kpiCards, setKpiCards] = useState(kpiCardsDataInitial);
   return (
     <div className="flex flex-col 2xl:flex-row gap-[20px] h-full">
       {/* Graph Box - Takes up 2/3 of the width on desktop */}
@@ -33,26 +36,23 @@ export default function HomeGraphsection() {
             </Button>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px] flex-1">
-            <KPICard
-              title="Infrastructure Units"
-              description="This describes variable two and what the shown data means."
-              value="€421.07"
-            />
-            <KPICard
-              title="Charging Growth"
-              description="This describes variable two and what the shown data means."
-              value={33.07}
-            />
-            <KPICard
-              title="Localization change"
-              description="This describes variable two and what the shown data means."
-              value="21.9%"
-            />
-            <KPICard
-              title="Fleet growth"
-              description="This describes variable two and what the shown data means."
-              value="7.03%"
-            />
+            {/* KPI Cards */}
+            {
+              kpiCards.length > 0 ? (
+                kpiCards.map((item, index) => (
+                  <KPICard
+                    key={index}
+                    title={item.title}
+                    description={item.description}
+                    value={item.value}
+                  />
+                ))
+              ) : (
+                <div className="flex items-center justify-center h-full">
+                  <p className="text-[16px] font-normal text-white-100">No data available</p>
+                </div>
+              )
+            }
           </div>
         </div>
       </div>

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
-import commonClasses from "../../../utills/commonClasses";
+import commonClasses from "@/utills/commonClasses";
+import { GrpahDataInitial } from "@/utills/staticData";
 
 interface GraphBoxProps {
   toolbar?: React.ReactNode;
@@ -135,13 +136,13 @@ export default function GraphBox({
       {
         type: "area",
         name: "Stripe Area",
-        data: [35000, 20000, 50000, 40000, 90000, 62000, 30000],
+        data: GrpahDataInitial.data,
         enableMouseTracking: false,
       },
       {
         type: "line",
         name: "Unsatisfied Demand",
-        data: [35000, 20000, 50000, 40000, 90000, 62000, 30000],
+        data: GrpahDataInitial.data,
         marker: {
           symbol: "circle",
         },

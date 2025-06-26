@@ -1,4 +1,4 @@
-import commonClasses from "../../utills/commonClasses";
+import commonClasses from "@/utills/commonClasses";
 
 interface ButtonProps {
   variant: "primary" | "secondary" | "tertiary";

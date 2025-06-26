@@ -1,6 +1,6 @@
-  import Input from "../../components/Input";
-  import { assets } from "../../utills/assets";
-  import commonClasses from "../../utills/commonClasses";
+  import Input from "@/components/Input";
+import { assets } from "@/utills/assets";
+import commonClasses from "@/utills/commonClasses";
 
 export default function HomeHeader() {
   return (

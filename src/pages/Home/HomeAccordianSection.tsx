@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { assets } from "../../utills/assets";
+import { assets } from "@/utills/assets";
 
 export default function HomeAccordianSection() {
   const [isExpanded, setIsExpanded] = useState(true);

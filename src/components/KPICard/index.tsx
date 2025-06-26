@@ -1,5 +1,5 @@
 import React from "react";
-import commonClasses from "../../utills/commonClasses";
+import commonClasses from "@/utills/commonClasses";
 
 interface KPICardProps {
   title: string;

@@ -1,4 +1,4 @@
-import { assets } from "../../utills/assets";
+import { assets } from "@/utills/assets";
 import { useRef } from "react";
 
 interface LabelProps {

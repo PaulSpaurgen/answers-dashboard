@@ -1,8 +1,8 @@
 import { useState } from "react";
 import HomeHeader from "./HomeHeader";
-import { assets } from "../../utills/assets";
-import Button from "../../components/Button";
-import Drawer from "../../components/Drawer";
+import { assets } from "@/utills/assets";
+import Button from "@/components/Button";
+import Drawer from "@/components/Drawer";
 import HomeGraphsection from "./HomeGraphsection";
 import HomeAccordianSection from "./HomeAccordianSection";
 import HomeEditVariablesComponent from "./HomeEditVariablesComponent";

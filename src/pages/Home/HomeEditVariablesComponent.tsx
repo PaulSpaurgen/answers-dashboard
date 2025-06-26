@@ -1,12 +1,12 @@
-import Button from "../../components/Button";
-import Input from "../../components/Input";
-import { assets } from "../../utills/assets";
-import commonClasses from "../../utills/commonClasses";
-import Label from "../../components/Label";
+import Button from "@/components/Button";
+import Input from "@/components/Input";
+import { assets } from "@/utills/assets";
+import commonClasses from "@/utills/commonClasses";
+import Label from "@/components/Label";
 import { useState, useRef } from "react";
-import { variableCategoriesInitial } from "../../utills/staticData";
+import { variableCategoriesInitial } from "@/utills/staticData";
 import { motion, AnimatePresence } from "framer-motion";
-import Accordion from "../../components/Accordian";
+import Accordion from "@/components/Accordian";
 
 // Variable data structure
 
